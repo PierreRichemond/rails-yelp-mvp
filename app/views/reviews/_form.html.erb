@@ -1,0 +1,8 @@
+<%= simple_form_for  [@restaurant, @review] do |t| %>
+    <%= t.input :content %>
+    <%= t.input :rating %>
+  <div class="d-flex">
+    <%= t.submit class: 'btn btn-primary mt-3'%>
+    <%= link_to 'Back to list of restaurants', restaurants_path %>
+  </div>
+<% end %>

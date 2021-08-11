@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Your restaurants</h1>
+  <% @restaurants.each do|restaurant| %>
+    <h2><%= restaurant.name %></h2>
+    <div class="d-flex justify-content-between">
+      <p><%= restaurant.address %></p>
+      <p><%= restaurant.phone_number %></p>
+      <p><%= restaurant.category %></p>
+    </div>
+    <%= link_to 'check details', restaurant_path(restaurant), class: 'btn btn-primary' %>
+    <%= link_to 'add a review', new_restaurant_review_path(restaurant), class: 'btn btn-primary' %>
+  <% end %>
+
+</div>

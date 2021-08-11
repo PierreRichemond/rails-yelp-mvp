@@ -1,0 +1,9 @@
+<%= simple_form_for(@restaurant) do |t| %>
+    <%= t.input :name %>
+    <%= t.input :address %>
+    <%= t.input :phone_number %>
+    <%= t.input :category %>
+  <div class="d-flex">
+    <%= t.submit class: 'btn btn-primary mt-3'%>
+  </div>
+<% end %>
